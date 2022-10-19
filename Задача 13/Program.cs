@@ -9,21 +9,24 @@ internal class Program
     {
         Console.WriteLine("Введите число");
         int A = Convert.ToInt32(Console.ReadLine());
+        int find = A % 10;
 
-        while (A > 99)
+        if (A > 99)
 
         {
-            int B = (A / 10);
-            int C = (B % 10);
-        
-            A = A / 10;
-            
-            Console.WriteLine($"Третья цифра в числе - {C}");
+            while  ( A > 1000)
+        {
+            A = (A / 10);
         }
-    
-        if (A < 100)
+        
+      Console.WriteLine($"Третья цифра в числе - {find}");
+        }
+        else
+    {
         {
             Console.WriteLine("Третья цифра отсутствует");
         }
-    }
+        }
+}    
 }
+    
